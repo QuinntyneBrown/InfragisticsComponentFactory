@@ -8,6 +8,12 @@ import { Subject } from "rxjs";
 })
 export class DynamicComponentComponent { 
 
+  public readonly players: { firstName: string, lastName:string }[] = [
+    { firstName: "Steph", lastName: "Curry" },
+    { firstName: "LeBron", lastName: "James" },
+    { firstName: "Chris", lastName: "Paul" }
+  ];
+  
   public onDestroy: Subject<void> = new Subject<void>();
 
   ngOnDestroy() {
